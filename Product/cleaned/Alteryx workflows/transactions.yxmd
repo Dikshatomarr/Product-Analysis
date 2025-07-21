@@ -1,0 +1,465 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2025.1" RunE2="T">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>transactions_clean.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="transaction_id" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="user_id" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="amount" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="category" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="payment_method" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="status" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="162" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="transaction_id" selected="True" />
+            <Field field="user_id" selected="True" />
+            <Field field="transaction_date" selected="True" />
+            <Field field="amount" selected="True" />
+            <Field field="category" selected="True" />
+            <Field field="payment_method" selected="True" />
+            <Field field="status" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="transaction_id" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="Int16" />
+            <Field name="user_id" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="Int16" />
+            <Field name="amount" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="category" size="10" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="String" />
+            <Field name="payment_method" size="10" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="status" size="7" source="File: C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||`Sheet1$`" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="270" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="transaction_id" selected="True" type="Int32" size="4" />
+            <SelectField field="user_id" selected="True" type="Int32" size="4" />
+            <SelectField field="amount" selected="True" type="Float" size="4" />
+            <SelectField field="category" selected="True" type="V_String" size="16384" />
+            <SelectField field="status" selected="True" type="V_String" size="2147483647" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings>
+        <Position x="390" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Check Box (135)">False</Value>
+          <Value name="Check Box (136)">False</Value>
+          <Value name="List Box (11)">"amount","category","payment_method","status"</Value>
+          <Value name="Check Box (84)">True</Value>
+          <Value name="Check Box (117)">True</Value>
+          <Value name="Check Box (15)">True</Value>
+          <Value name="Check Box (109)">True</Value>
+          <Value name="Check Box (122)">True</Value>
+          <Value name="Check Box (53)">False</Value>
+          <Value name="Check Box (58)">False</Value>
+          <Value name="Check Box (70)">False</Value>
+          <Value name="Check Box (77)">False</Value>
+          <Value name="Drop Down (81)">upper</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Cleanse.yxmc" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="570" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression><![CDATA[IsNull([transaction_id]) 
+OR IsNull([user_id]) 
+OR [amount] <= 0 
+OR NOT ([status] IN ("success", "failed"))
+]]></Expression>
+          <Mode>Custom</Mode>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>IsNull([transaction_id]) 
+OR IsNull([user_id]) 
+OR [amount] &lt;= 0 
+OR NOT ([statu...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="234" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>users_clean.xlsx
+Query=`Sheet1$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="user_id" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="signup_date" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Date" />
+            <Field name="device_type" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="acquisition_channel" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="region" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="is_kyc_completed" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Bool" />
+            <Field name="referral_source" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="signup_month" size="255" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="V_String" />
+            <Field name="days_since_signup" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="device_web_flag" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="342" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="device_type" selected="True" />
+            <Field field="acquisition_channel" selected="True" />
+            <Field field="region" selected="True" />
+            <Field field="referral_source" selected="True" />
+            <Field field="signup_month" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="user_id" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="signup_date" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Date" />
+            <Field name="device_type" size="7" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="String" />
+            <Field name="acquisition_channel" size="8" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="String" />
+            <Field name="region" size="5" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="String" />
+            <Field name="is_kyc_completed" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Bool" />
+            <Field name="referral_source" size="10" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="String" />
+            <Field name="signup_month" size="7" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="String" />
+            <Field name="days_since_signup" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Double" />
+            <Field name="device_web_flag" source="File: C:\Users\dell\Desktop\Product\cleaned\data\users_clean.xlsx|||`Sheet1$`" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="462" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="user_id" selected="True" type="Int32" size="4" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="606" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="user_id" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="user_id" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_transaction_id" selected="True" input="Left_" />
+                <SelectField field="Left_user_id" selected="True" input="Left_" />
+                <SelectField field="Left_amount" selected="True" input="Left_" />
+                <SelectField field="Left_category" selected="True" input="Left_" />
+                <SelectField field="Left_payment_method" selected="True" input="Left_" />
+                <SelectField field="Left_status" selected="True" input="Left_" />
+                <SelectField field="Left_is_successful" selected="True" input="Left_" />
+                <SelectField field="Right_user_id" selected="False" rename="Right_user_id" input="Right_" />
+                <SelectField field="Right_is_kyc_completed" selected="True" input="Right_" />
+                <SelectField field="Left_transaction_date" selected="True" input="Left_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="858" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="25">C:\Users\dell\Desktop\Product\cleaned\data\transactions_clean.xlsx|||Sheet1</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <MipTenantId />
+            <PreserveFormat>False</PreserveFormat>
+            <MipSensitivity />
+            <UNCLocal>False</UNCLocal>
+            <SkipFieldNames>False</SkipFieldNames>
+            <SuppressBlankFile>False</SuppressBlankFile>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>transactions_clean.xlsx
+Query=Sheet1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="738" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="transaction_id" selected="True" />
+            <SelectField field="user_id" selected="True" />
+            <SelectField field="amount" selected="True" />
+            <SelectField field="category" selected="True" />
+            <SelectField field="payment_method" selected="True" />
+            <SelectField field="status" selected="True" />
+            <SelectField field="is_successful" selected="True" />
+            <SelectField field="signup_date" selected="True" />
+            <SelectField field="device_type" selected="True" />
+            <SelectField field="acquisition_channel" selected="True" />
+            <SelectField field="region" selected="True" />
+            <SelectField field="kyc_completed" selected="True" />
+            <SelectField field="referral_source" selected="True" />
+            <SelectField field="signup_month" selected="True" />
+            <SelectField field="days_since_signup" selected="True" />
+            <SelectField field="device_web_flag" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="462" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression=" IF [status] = &quot;success&quot; THEN 1 ELSE 0 ENDIF&#xA;" field="is_successful" size="1073741823" type="V_WString" enabled="true" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[is_successful =  IF [status] = "success" THEN 1 ELSE 0 ENDIF
+
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input2" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output26" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="False" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <DefaultTZ value="Local" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="False" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <IsTemplate value="False" />
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>transactions</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="4bac0ef9-ee6b-4b88-8d65-d0c95a44b170" />
+      <Telemetry>
+        <PreviousWorkflowId value="d75f85cd-cc80-44cb-a6f5-1a08fa412370" />
+        <OriginWorkflowId value="02cec7f6-df82-4979-936e-4fa26a96883e" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
