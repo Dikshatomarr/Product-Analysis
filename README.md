@@ -3,7 +3,7 @@
 ## Executive Summary
 This end-to-end product analytics project aims to simulate a real-world scenario for an app similar to Jar or Slice. The goal is to analyze user behavior, transaction patterns, and revenue performance using an integrated modern data stack.
 
-- Tools Used: Alteryx, Python, Power BI, Apache Airflow
+- Tools Used: Alteryx, Python, Power BI
 - Business Goal: Understand user conversion, retention, and revenue generation across the user lifecycle.
 - Output: Cleaned datasets, exploratory data analysis, and dynamic dashboards.
 
@@ -25,8 +25,6 @@ Raw Data
 ├── 📊 Python: EDA + Metrics  
 │  
 ├── 📈 Power BI: Dashboard Building  
-│  
-└── 🛠 Airflow: Workflow Orchestration (To be implemented)
 ````
 
 **Approach**:  
