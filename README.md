@@ -171,3 +171,10 @@ This analysis enabled:
 - Seasonal planning based on transaction trends  
 - Clear recommendations for user retention and upselling
 
+## Dashboard Preview
+
+<img width="1284" height="709" alt="image" src="https://github.com/user-attachments/assets/69d37d96-5107-4565-8a54-14b419e8a19f" />
+
+<img width="1270" height="714" alt="image" src="https://github.com/user-attachments/assets/7736f7cb-e076-4d5c-84d1-3f254ce8fa2b" />
+
+
